@@ -1,0 +1,249 @@
+.container-mobile {
+    display: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #cccccc url(assets/background.jpg) no-repeat fixed center center;
+    background-size: cover;
+    font-family: Open Sans;
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 0;
+}
+
+.container-desktop {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr 1fr 1fr 1fr 1fr 1.7fr;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+
+.container-desktop .sub-container {
+    display: grid;
+    height: 100vh;
+}
+
+.container-desktop .item {
+    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+    text-align: center;
+    padding: 0 5%;
+    z-index: 1;
+}
+
+.container-desktop .sub-item {
+    /*border: 1px solid white;*/
+    text-align: center;
+    align-self: end;
+    margin-bottom: 30%;
+}
+
+.filter-white {
+    filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(111deg) brightness(113%) contrast(100%);
+}
+
+.container-desktop .browser, 
+.container-desktop .message {
+    color: white;
+}
+
+.container-desktop .browser img {
+    height: 11rem;
+    padding-bottom: 1.4rem;
+}
+
+.container-desktop .browser .name {
+    font-size: 1.4rem;
+    padding-bottom: 0.5rem;
+}
+
+.container-desktop .browser .version {
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding-bottom: 2.2rem;
+}
+
+.container-desktop .browser a.button,
+.container-desktop .message a.button {
+    display:inline-block;
+    font-size:1.2rem;
+    font-weight:300;
+    padding:1.1rem 1.6rem;
+    border:0.1rem solid #FFFFFF;
+    margin:0 0.3rem 0.3rem 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    color:white;
+    transition: all 0.2s;
+}
+
+.container-desktop .message a.button {
+    background-color:#929292;
+}
+
+.container-desktop .browser a.button:hover, 
+.container-desktop .message a.button:hover {
+    color:#000000;
+    background-color:#FFFFFF;
+}
+
+.chrome {
+    background-color: rgba(235, 186, 74, 0.23);
+}
+
+.firefox {
+    background-color: rgba(232, 160, 62, 0.23);
+}
+
+.edge {
+    background-color: rgba(90, 198, 250, 0.23);
+}
+
+.safari {
+    background-color: rgba(69, 156, 227, 0.23);
+}
+
+.opera {
+    background-color: rgba(227, 99, 77, 0.23);
+}
+
+.container-desktop .item-message {
+    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+    position: relative;
+    background-color: #777777;
+    top: -85vh;
+    z-index: 2;
+}
+
+.container-desktop .item-message.left {
+    grid-column: 1;
+}
+
+.container-desktop .item-message.main {
+    grid-column: 2 / span 4;
+    text-align: left;
+}
+
+.container-desktop .item-message.right {
+    grid-column: 6 / span 2;
+}
+
+.container-desktop .message {
+    padding: 5% 0 5% 5%;
+}
+
+.container-desktop .message .title {
+    font-size: 2.45rem;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
+}
+
+.container-desktop .message .title .bold {
+    font-weight: 700;
+}
+
+.container-desktop .message .icon-warning {
+    padding: 1.6rem;
+    margin-right: 0.8rem;
+    background: url(assets/exclamation-triangle.svg) no-repeat left center;
+}
+
+.container-desktop .message .content {
+    font-size: 1.15rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+}
+
+.container-desktop .message .content p {
+    margin: 0 0 8px 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    .container-desktop {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    
+    .container-desktop .item-message {
+        top: -80vh;
+    }
+
+    .container-desktop .browser img {
+        height: 11rem;
+        padding-bottom: 0.9rem;
+    }
+
+    .container-desktop .browser .name {
+        font-size: 1.3rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .container-desktop .browser .version {
+        font-size: 1.3rem;
+        padding-bottom: 1.3rem;
+    }
+
+    .container-desktop .browser a.button,
+    .container-desktop .message a.button {
+        font-size:1.3rem;
+        padding:0.6rem 1.1rem;
+    }
+
+    .container-desktop .message .title {
+        font-size: 2.2rem;
+    }
+
+    .container-desktop .message .icon-warning {
+        padding: 1.3rem;
+    }
+
+    .container-desktop .message .content {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .container-desktop {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    
+    .container-desktop .item-message {
+        top: -88vh;
+    }
+
+    .container-desktop .browser img {
+        height: 8rem;
+        padding-bottom: 0.9rem;
+    }
+
+    .container-desktop .browser .name {
+        font-size: 1.1rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .container-desktop .browser .version {
+        font-size: 1.1rem;
+        padding-bottom: 1.3rem;
+    }
+
+    .container-desktop .browser a.button,
+    .container-desktop .message a.button {
+        font-size:1.1rem;
+        padding:0.6rem 1.1rem;
+    }
+
+    .container-desktop .message .title {
+        font-size: 1.7rem;
+    }
+
+    .container-desktop .message .icon-warning {
+        padding: 1rem;
+    }
+
+    .container-desktop .message .content {
+        font-size: 1.1rem;
+    }
+}
+

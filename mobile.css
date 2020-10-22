@@ -1,0 +1,102 @@
+.container-desktop {
+    display: none;
+}
+
+.container-mobile {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    height: 100vh;
+}
+
+.container-mobile .item {
+    /*border: 1px solid yellow;*/
+}
+
+.container-mobile .sub-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 5% 4%;
+}
+
+.container-mobile .sub-item {
+    /*border: 1px solid pink;*/
+}
+
+.container-mobile .browser, 
+.container-mobile .message {
+    color: white;
+}
+
+.container-mobile .sub-item.browser-icon {
+    align-self: center;
+    justify-self: center;
+    padding-right: 25%;
+}
+
+.container-mobile .sub-item.browser-label {
+    align-self: center;
+    justify-self: start;
+}
+
+.container-mobile .sub-item.download-icon {
+    align-self: center;
+    justify-self: center;
+}
+
+.container-mobile .browser img {
+    height: 5rem;
+}
+
+.container-mobile .browser .name {
+    font-size: 1.5rem;
+}
+
+.container-mobile .browser .version {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.container-mobile .browser a.button {
+    display: inline-block;
+    background: url(assets/download.svg) no-repeat center;
+    background-size: cover;
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.container-mobile .item-message {
+    background-color: #777777;
+}
+
+.container-mobile .message {
+    padding: 5% 5% 1% 5%;
+}
+
+.container-mobile .message .icon-warning {
+    float:left;
+    padding: 2.3rem;
+    margin-right: 0.8rem;
+    background: url(assets/exclamation-triangle.svg) no-repeat left center;
+}
+
+.container-mobile .message .title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+.container-mobile .message .title .bold {
+    font-weight: 700;
+}
+
+.container-mobile .message .content {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.container-mobile .message .content p {
+    margin: 0 0 8px 0;
+}
+
+
